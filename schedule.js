@@ -31,9 +31,6 @@ getDay();
 
 //color code time blocks based on when a task is over due, due in the future or current 
 //first get current time 
-// var currentTime = (new Date()).getHours();
-// console.log(currentTime);
-// var now = moment().format('h:mm:ss');
 var now = new Date();
 var time = now.getHours();
 console.log(time);
@@ -43,7 +40,6 @@ $(document).ready(function() {
 
     //input boxes as an array get index of each item you loop 
     $(".my-input").each(function(input) {
-        // console.log($(".my-input")[input].id);
     //take the data attribute and read the time value to change from string to number 
     console.log($(".time-slot"));
     var dataAttTime = $(".time-slot")[input].id;
@@ -64,23 +60,6 @@ $(document).ready(function() {
 
     });
 });
-// write an if else if to determine the color block for the currentTime 
-//     function getHour() {
-//      var hourBlock = $("div.row");
-//         if (currentTime === now) {
-//         hourBlock.add('.present');
-//      } else if (currentTime < now) {
-//          hourBlock.addClass('.past');
-//      } else if (currentTime > now) {
-//          hourBlock.addClass('.future');
-//      }
-//      console.log('function is running');
-// };
-
-
-
-
-
 
 
 // //click events to buttons 
@@ -105,7 +84,6 @@ $(".saveBtn").click(function (){
     localStorage.setItem('8', four);
     var five = document.getElementById('block17').value;
     localStorage.setItem('9', five);
-console.log('clicked');
 });
 
 
